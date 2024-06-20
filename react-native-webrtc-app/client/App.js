@@ -26,6 +26,9 @@ import VideoOff from './asset/VideoOff';
 import CameraSwitch from './asset/CameraSwitch';
 import IconContainer from './components/IconContainer';
 import InCallManager from 'react-native-incall-manager';
+import {registerGlobals} from 'react-native-webrtc';
+
+registerGlobals();
 
 export default function App({}) {
   const [localStream, setlocalStream] = useState(null);
@@ -39,7 +42,7 @@ export default function App({}) {
   );
   const otherUserId = useRef(null);
 
-  const socket = SocketIOClient('http://192.168.2.201:3500', {
+  const socket = SocketIOClient('http://127.0.0.1:3500', {
     transports: ['websocket'],
     query: {
       callerId,
