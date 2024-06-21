@@ -32,3 +32,4 @@ in `client`, do `npx react-native start` and the app should be setup
 Note, 
 - make sure the client is running while the server is running.
 - You need to set the signaling server ip `  const socket = SocketIOClient('http://127.0.0.1:3500', {` so that the client can find the node js signaling server. For local testing, just keep it as it is, if it's local network use your laptop's ip address. Both side need to be able to access the server using that ip address.
+- If you have trouble to build one for physical device and it suggest missing `node`, simply follow this [instruction](https://chatgpt.com/share/45111a14-c0d5-4d00-a713-01662434b590)
